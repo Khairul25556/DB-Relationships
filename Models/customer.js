@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const {Schema} = mongoose;
 
 async function connection(){
-    const name = "Khairul";
-    const pass = "`@#19103018Kh#@`";
+    const name = "";
+    const pass = "";
     const encodedPass = encodeURIComponent(pass);
     await mongoose.connect(`mongodb://${name}:${encodedPass}@127.0.0.1:27017/relationDemo?authSource=admin`);
 }
