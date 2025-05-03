@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const {Schema} = mongoose;
 
 async function connection(){
-    const name = "";
-    const pass = "";
+    const name = process.env.DB_USER;
+    const pass = process.env.DB_PASS;
     const encodedPass = encodeURIComponent(pass);
     await mongoose.connect(`mongodb://${name}:${encodedPass}@127.0.0.1:27017/relationDemo?authSource=admin`);
 }
